@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <style type="text/css">
+            *{
+                background-color: #b11d98;
+                font-family: Georgia;
+            }
+            
+        </style>
+        <h1>23 Form Validation:-</h1>
+        <script src="/Script/23 Form Validation.js"></script>
+
+    </head>
+
+    <body>
+        <p>1. Name should not be blank & its length have to be less than 9 and greater than 3</p>
+        <br>
+
+        <form name="myform1" onsubmit="return validate1()">
+            Username:<input type="text" name="uname" id="uname">
+            <span style="color: black" id="error"></span>
+            <!-- if username is wrong so with this span, error msg will be print from inner HTML -->
+            <br>
+            <input type="submit" name="submit" value="submit-1">
+        </form>
+        <br><br>
+
+
+        <p>2. Username must be in characters format, numbers not allowed.</p>
+        <br>
+
+        <form name="myform2" onsubmit="return validate2()">
+            Username:<input type="text" name="uname" id="lname">
+            <span style="color: black" id="val2error"></span>
+            <br>
+            <input type="submit" name="submit" value="submit-2">
+        </form>
+        <br><br>
+
+
+        <p>3. Password cant be blank, length format, confirm password again.</p>
+        <br>
+
+        <form name="myform3" onsubmit="return password1()">
+            Password:<input type="password" name="pass" id="pass">
+            <span style="color: black" id="passerror"></span>
+            <br> <br>
+            Confirm Password:<input type="password" name="cpass" id="cpass">
+            <br>
+            <input type="submit" name="submit" value="submit-3">
+        </form>
+        <br><br>
+
+
+        <p>4. Mobile number fill up.</p>
+        <br>
+
+        <form name="myform4" onsubmit="return mblnumber()">
+            Mobile number:<input type="text" name="number" id="number">
+            <span style="color: black" id="mblnum"></span>
+            <br>
+            <input type="submit" name="submit" value="submit-4"><br>
+        </form>
+        <br><br>
+
+
+        <p>5. E-mail fill up.</p>
+        <br>
+
+        <form name="myform5" onsubmit="return emailchk()">
+            E-mail:<input type="text" name="email" id="email">
+            <span style="color: black" id="emailcheck"></span>
+            <br>
+            <input type="submit" name="submit" value="submit-5"><br>
+        </form>
+        <br><br>
+
+
+        <p>5. Radio button.</p>
+        <br>
+
+        <form name="myform6" onsubmit="return radiobutton()">
+            <input type="radio" name="container" value="cup">Cup
+            <input type="radio" name="container" value="plaincone">Plain cone
+            <input type="radio" name="container" value="sugarcone">Sugar cone
+            <input type="radio" name="container" value="wafflecome">Waffle come
+            <br>
+            <p id="radiobtn" ></p>
+            <input type="submit" name="submit" value="submit-6 [radio btn]">
+        </form>
+        <br><br>
+
+    </body>
+</html>

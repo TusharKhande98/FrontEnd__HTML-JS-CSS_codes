@@ -1,0 +1,206 @@
+<html>
+    <head>
+        <h1>21 Browser Object Model:- </h1>
+        <br>
+        <script src="/Script/21 Browser Object Model.js"></script>
+
+        <style type="text/css">
+            *{
+                color: rgb(5, 4, 4);
+                background-color: rgb(116, 183, 225);          
+            }
+        </style>
+
+        
+    </head>
+
+    <body>
+        
+        <!-- content 3 -->
+        <input type="button" name="open" value="Open Window" onclick="openWin()">
+        <input type="button" name="close" value="Close Window" onclick="closeWin()">
+        <br><br>
+
+        <p>Content 4 - TimeOut :-</p>
+       
+        <script>
+       
+            function openWin2()
+            {
+                var operator = window.open ("7 Conditional Statement.html", "operator", "width=350,height=280")
+            }
+
+            function timeout()
+            {
+                setTimeout("openWin2()", 3000)
+                // here in timeout function, we call open window function & set time of 3000 milliseconds
+            }
+            // new window will be open in 3000 ms.
+
+        </script>
+
+        <input type="button" name="open" value="Open Window" onclick="timeout()">
+        <br><br>
+
+        <p>Content 5 - Interval :-</p>
+       
+        <script>
+       
+            function starttime()
+            {
+                document.getElementById("mytime").innerHTML=new Date().toLocaleTimeString()
+            }
+
+            function settime()
+            {
+                setInterval("starttime()", 3000)
+          
+            }
+        </script>
+                <!-- time will display & it incremented by 3 seconds cauze we set it in a code -->
+        <body onload="settime()">
+            <p id="mytime"></p>
+        </body>
+        <br><br>
+
+        <h3>Screen Object - Access screen width & height:-</h3>
+      
+        <script>
+            document.write("Screen width = " + window.screen.width + "<br>")
+            document.write("Screen height = " + window.screen.height + "<br>")
+
+            document.write("Available screen width = " + screen.availWidth + "<br>")
+            document.write("Available screen height = " + screen.availHeight + "<br>")
+            </script>
+            <br><br>
+
+
+        <h3>History Object:-</h3>
+
+        <script>
+            document.write(window.history.length)
+            // it shows the count of web page that we opened 1,2,3... etc
+            
+            history.back()
+            history.forward()
+            // it behave as a fwd & rev button on our web browser
+            
+            history.go(1)
+            history.go(-1)
+            // same as above but little bit difference(not understand)
+        </script>
+        <br><br>
+
+        <h3>Navigator Object:- Gives details about our browser & system</h3>
+
+        <script>
+            document.write(navigator.appName + "<br>")
+            document.write(navigator.appVersion + "<br>")
+            document.write(navigator.platform + "<br>")
+            document.write(navigator.language + "<br>")
+        </script>
+        <br><br>
+
+        <h3>Location Object:-</h3>
+
+        <p>Content 1 - Redirect purpose:-</p>
+        <script>
+
+            // uncomment below line to see effect, then comment it cauz it affects whole page code
+            // window.location="http://www.google.com"
+            // if we type old/any url of website so it will be redirect to currrent URl of that website
+            </script>
+
+        <!--Below code also same we just set link into a button  -->
+        <script>
+            function myfunc()
+            {
+                window.location="http://www.google.com"
+            }
+        </script>
+        <input type="button" name="but" value="Get" onclick="myfunc()">
+
+
+        <!-- use for server redirect -->
+        <script>
+            function myfunc2()
+            { 
+                var ans = confirm("If u want to delete your account")
+                if(ans)
+                {
+                    window.location="Lucifer.php"
+                }
+                else
+                {
+                    alert("Sorry")
+                }
+                
+            }
+        </script>
+        <input type="button" name="but" value="Delete" onclick="myfunc2()">
+        <br>
+	
+
+        <p>Content 2 - Location & web page related:-</p>
+        <script>
+            function locationAndPath()
+            {
+                document.write(location.href + "<br>")
+                // gives location
+                document.write(location.pathname + "<br>")
+                // gives file name
+            }
+        </script>
+        <input type="button" name="but" value="Check Location & path/file name" onclick="locationAndPath()">
+        <br>
+
+        
+        <script>
+            function prototype()
+            {
+                document.write(location.protocol + "<br>")
+                // gives type of web page(may be)
+            }
+        </script>
+        <input type="button" name="but" value="See type" onclick="prototype()">
+        <br>
+
+
+        <script>
+            function locatAssign()
+            {
+                document.location.assign("http://www.google.com" + "<br>") 
+                // run above line when we connected to internet
+                // it use to load another resourse from URL provide as parameter
+            }
+        </script>
+        <input type="button" name="but" value="Assign" onclick="locatAssign()">
+        <br>
+
+
+        <script>
+            function replaceSameAsAssign()
+            {
+                window.location.replace("http://www.google.com" + "<br>") 
+               // it same as 'assign' just in this we cant go back & it dosent make any entry in history
+            }
+        </script>
+        <input type="button" name="but" value="Replace" onclick="replaceSameAsAssign()">
+        <br>
+
+
+        <script>
+            function reloadDisplay()
+            {
+                window.location.reload("http://www.google.com" + "<br>") 
+                // here no need of button(cauz it reload page, we give button just casually TimePass)
+            }
+        </script>
+        <input type="button" name="but" value="Reload" onclick="reloadDisplay()">
+        <br>
+
+
+    </body>
+
+
+</html>

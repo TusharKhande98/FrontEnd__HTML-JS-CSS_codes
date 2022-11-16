@@ -1,0 +1,188 @@
+
+<html>
+    <head>
+        <title>!*Document Object Model*!</title>
+        <h1>20 Document Object Model:- </h1>
+        <br>
+        <script src="/Script/20 Document Object Model.js"></script>
+
+        <style type="text/css">
+            *{
+                font-family: sans-serif;
+                color:rgb(53, 7, 53);
+                background-color:lightgray;          
+            }
+        </style>
+
+    </head>
+ 
+    <body>
+        <p>1. Welcome</p>
+        <p id="demo"></p>
+        <!-- here we call id from setedata function  -->
+        <input type="button" name="but1" value="Get-1" onclick="setdata1()
+        ">
+        <br><br>
+
+        <p id="replaced">2. It can be replaced after we call I'd</p>
+        <input type="button" name="but2" value="Get-2" onclick="setdata2()
+        ">
+        <br><br>
+
+        <p id="changeproperty">3. Color will change after click on button</p>
+        <input type="button" name="but3" value="Get-3" onclick="setdata3()">
+        <br><br>
+        
+        
+        <form name="myform1">
+            4. Username:<input type="text" name="uname" id="uname">
+            <br>
+            <input type="button" name="but4" value="Get-4" onclick="setdata4()">
+        </form>
+        <br><br>
+
+
+        <p>5. Simple calculator UI with HTML & JS</p>
+        <table border="1">
+            <form name="myform2">
+                <tr>
+                    <td colspan="6"><input type="text" name="input" size="30"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="add" value="+" onclick="userinput('+')"></td>
+                    <td><input type="button" name="mult" value="*" onclick="userinput('*')"></td>
+                    <td><input type="button" name="sub" value="-" onclick="userinput('-')"></td>
+                    <td><input type="button" name="div" value="/" onclick="userinput('/')"></td>
+                    <td><input type="button" name="clear" value="clear" onclick="input.value=''; inputstring=''"></td>
+                    <!-- onclick = ''  we keep it blank to clear data & again blank inputstring to to clear concat string-->
+                    <td><input type="button" name="=" value="=" onclick="input.value=eval(inputstring)"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="1" value="1" onclick="userinput('1')"></td>
+                    <td><input type="button" name="2" value="2" onclick="userinput('2')"></td>
+                    <td><input type="button" name="3" value="3" onclick="userinput('3')"></td>
+                    <td><input type="button" name="4" value="4" onclick="userinput('4')"></td>
+                    <td><input type="button" name="5" value="5" onclick="userinput('5')"></td>
+                    <td><input type="button" name="6" value="6" onclick="userinput('6')"></td>
+                    <!-- <td><input type="button" name="7" value="7"></td>
+                    <td><input type="button" name="8" value="8"></td>
+                    <td><input type="button" name="9" value="9"></td>
+                    <td><input type="button" name="0" value="0"></td> -->
+                  </tr>
+            </form>
+        </table>
+        <br><br>
+
+
+        <p>6. Pop-up Form</p>
+        <input type="button" name="but" value="Log-in Form" onclick="openform()">
+        <form name="myform3" id="myform3" style="display:none">
+            <!-- we apply display off & show it after write code in JS file -->
+            <input type="button" name="close" value="Close" onclick="closeform()">
+            Username: <input type="text" name="uname">
+            <br>
+            Password: <input type="password" name="pass">
+            <br>
+		  	<input type="submit" name="submit" value="Login">
+		  	<input type="reset" name="reset" value="Cancle">
+            <br>
+        </form>
+        <br><br>
+       
+
+        <p>7.Text Editor</p>
+        <form name="myform4" id="myform4">
+            <input type="button" name="bold" value="B" onclick="bolddata()">
+            <input type="button" name="italic" value="I" onclick="italicdata()">
+            <input type="button" name="underline" value="U" onclick="underlinedata()">
+            <input type="reset" name="reset" value="clear"> <br>
+            <textarea id="text" cols="20" rows="5"  onclick="loaddata()"></textarea>
+        </form>
+        <br><br>
+
+        
+        <p>8. Get Element by 'name' examples</p>
+        <p name="para">This is paragraph - 1</p>
+        <p name="para">This is paragraph - 2</p>
+        <p name="para">This is paragraph - 3</p>
+        <p name="para">This is paragraph - 4</p>
+        <input type="button" name="but" value="Get" onclick="datapara()">
+        <p id="ans"></p>
+        
+        <br><br>
+        
+        <p>9(a). Get Element by 'Tag Name' example-1</p>
+        <p name="para">Its paragraph - 1</p>
+        <p name="para">Its paragraph - 2</p>
+        <p name="para">Its paragraph - 3</p>
+        <p name="para">Its paragraph - 4</p>
+        <input type="button" name="but" value="Get" onclick="datatag()">
+        <p id="print"></p>
+        <br>
+        
+        <p>9(b). Get Element by 'Tag Name' example-2</p>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <input type="button" name="but" value="Get" onclick="datatagli()">
+        <p id="list"></p>
+
+        <br><br>
+        
+        <p>10. Get Element by 'Class Name' example</p>
+        <ul>
+            <li class="home">Home</li>
+            <li class="about">About</li>
+            <li class="contact">Contact</li>
+        </ul>
+        <input type="button" name="but" value="Get" onclick="dataclass()">
+        <p id="classname"></p>
+        
+        <br><br>
+        
+        <p>11. 'writeln()' Method</p>
+        <script>    
+            document.writeln("Its add just a space but its not starts on new line, for that purpose we need to use 'br' tag<br>")
+            document.writeln("AB")
+            document.writeln("CD")
+        </script>
+        <br><br>
+        
+        <p>12. URL property</p>
+        <script>    
+            document.writeln("It returns full URL of ciurrent document<br>")
+            document.write(document.URL)
+        </script>
+        <br><br>
+        
+        <p>13. Title property</p>
+        <script>    
+            document.writeln("It returns Title of ciurrent document:- ")
+            document.write(document.title)
+        </script>
+        <br><br>
+
+        <p>14. 'addEventListener()' Method</p>
+        
+        <input type="button" name="but" value="Click to see normal example of event alert" onclick="myevent()">
+        <br> <br>
+
+        
+       
+        <script type="text/javascript">
+            document.addEventListener("Click to see normal example of event listener", function()
+            {
+                alert("Welcome to Event Listener")
+            }
+
+            )
+        </script>
+         <input type="button" name="but" value="Click to see normal example of event listener"
+ 
+        <!-- ABOVE CODE NEED TO TYPE INDIVIDUALLY TO SEE OUTPUT -->
+        <br><br>
+    </body>
+
+</html>
